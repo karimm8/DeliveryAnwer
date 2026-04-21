@@ -116,10 +116,15 @@
       <div class="cc-val">7j/7 · 8h–22h</div>
     </div>
   </div>
-  <div class="form-group"><label>Votre nom</label><input type="text" placeholder="Ex: Ahmed Benali"/></div>
-  <div class="form-group"><label>Téléphone</label><input type="tel" placeholder="06 XX XX XX XX"/></div>
-  <div class="form-group"><label>Votre message / commande</label><textarea placeholder="Décrivez votre livraison..."></textarea></div>
-  <button class="submit-btn">Envoyer la demande</button>
+  <div class="form-group"><label>Votre nom</label><input id="f-nom" type="text" placeholder="Ex: Ahmed Benali"/></div>
+  <div class="form-group"><label>Téléphone</label><input id="f-tel" type="tel" placeholder="06 XX XX XX XX"/></div>
+  <div class="form-group"><label>Votre message / commande</label><textarea id="f-msg" placeholder="Décrivez votre livraison..."></textarea></div>
+   <div class="form-group">
+    <label>📍 Votre localisation (lien Google Maps)</label>
+    <input id="f-loc" type="text" placeholder="Collez votre lien Google Maps ici..."/>
+    <small style="color:#888;font-size:0.75rem;margin-top:0.3rem;display:block;">Ouvrez Google Maps → Appuyez sur votre position → Partagez le lien</small>
+  </div>
+  <button class="submit-btn" onclick="sendWA()">Envoyer la demande</button>
 </section>
 
 <footer>
@@ -132,6 +137,6 @@
     <path d="M16 2C8.268 2 2 8.268 2 16c0 2.49.648 4.83 1.78 6.86L2 30l7.34-1.74A13.94 13.94 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.5a11.44 11.44 0 0 1-5.83-1.59l-.42-.25-4.35 1.03 1.06-4.24-.27-.44A11.5 11.5 0 1 1 16 27.5zm6.3-8.6c-.34-.17-2.02-.99-2.33-1.1-.31-.12-.54-.17-.77.17-.23.34-.88 1.1-1.08 1.33-.2.22-.39.25-.73.08-.34-.17-1.43-.53-2.73-1.68-1.01-.9-1.69-2.01-1.89-2.35-.2-.34-.02-.52.15-.69.15-.15.34-.39.51-.59.17-.2.22-.34.34-.57.11-.22.06-.42-.03-.59-.08-.17-.77-1.85-1.05-2.54-.28-.67-.56-.58-.77-.59-.2-.01-.42-.01-.65-.01s-.59.08-.9.42c-.31.34-1.18 1.15-1.18 2.81s1.21 3.26 1.38 3.49c.17.22 2.38 3.63 5.77 5.09.81.35 1.44.56 1.93.71.81.26 1.55.22 2.13.13.65-.1 2.02-.83 2.3-1.62.28-.8.28-1.48.2-1.62-.08-.14-.31-.22-.65-.39z"/>
   </svg>
 </a>
-
+<script src="js/script.js"></script>
 </body>
 </html>
