@@ -4,36 +4,106 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="stylesheet" href="css/style.css">
-<title>Anwer Delivery</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+<title>Anouar Delivery</title>
 </head>
 <body>
 
 <nav>
-  <div class="logo">Anwer Delivery</div>
+  <a href="#" class="logo">Anouar Delivery</a>
   <div class="nav-links">
     <a href="#about">À propos</a>
     <a href="#services">Services</a>
+    <a href="#gallery">Galerie</a>
     <a href="#contact">Contact</a>
   </div>
-  <a href="https://wa.me/212633812010" target="_blank"><button class="cta-btn" style="padding:0.5rem 1.3rem;font-size:0.85rem;">Commander</button></a>
+  <a href="https://wa.me/212633812010" target="_blank"><button class="cta-btn"
+data-fr="Commander">Commander</button></a>
 </nav>
 
-<!-- HERO -->
-<section id="hero">
-  <div class="badge">Livraison locale — Ben Slimane</div>
-  <h1>Livraison rapide<br>à <span>Ben Slimane</span></h1>
-  <p>نحن هنا لنلبي طلباتكم في اي وقت — توصيل آمن وسريع من المتجر إلى بابك</p>
-
- <img src="img/hero.jpeg" style="width:100%;max-width:700px;border-radius:16px;margin-bottom:2rem;object-fit: cover;"/>
-
-  <div class="hero-btns">
-    <a href="https://wa.me/212633812010" target="_blank"><button class="cta-btn">Commander maintenant</button></a>
-    <a href="#services"><button class="cta-ghost">Nos services</button></a>
+<!-- =============================== -->
+<!--          HERO SLIDER            -->
+<!-- =============================== -->
+<section id="hero-slider">
+  <!-- Slide 1 -->
+  <div class="slide active" data-index="0">
+    <div class="slide-bg" style="background-image:url('img/slider2.jpeg')"></div>
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <div class="slide-tag">ANOUAR DELIVERY — بن سليمان</div>
+      <h1>نوصل لك <span>طلبك</span><br>وين ماكنت !</h1>
+      <p>خدمة توصيل سريعة وموثوقة — متاح 24/24 في بن سليمان</p>
+      <div class="slide-btns">
+        <a href="https://wa.me/212633812010" target="_blank"><button class="cta-btn">Commander maintenant</button></a>
+        <a href="#services"><button class="cta-ghost">Nos services</button></a>
+      </div>
+    </div>
   </div>
-  <div class="hero-stats">
+
+  <!-- Slide 2 -->
+  <div class="slide" data-index="1">
+    <div class="slide-bg" style="background-image:url('img/slider4.jpeg')"></div>
+    <div class="slide-overlay" style="background:linear-gradient(135deg,rgba(10,20,5,0.88) 0%,rgba(27,60,10,0.35) 100%)"></div>
+    <div class="slide-content">
+      <div class="slide-tag">خضار طازجة — LÉGUMES FRAIS</div>
+      <h1>الخضار <span>وصلك</span><br>لدارك !</h1>
+      <p>الخضار بعيد عليك؟ خليك فدارك — أنوار يجيبها ليك طازجة وفي وقتها</p>
+      <div class="slide-btns">
+        <a href="https://wa.me/212633812010" target="_blank"><button class="cta-btn">اطلب الان</button></a>
+        <a href="#gallery"><button class="cta-ghost">Voir la galerie</button></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="slide" data-index="2">
+    <div class="slide-bg" style="background-image:url('img/slider3.jpeg')"></div>
+    <div class="slide-overlay" style="background:linear-gradient(135deg,rgba(20,5,5,0.88) 0%,rgba(100,20,10,0.35) 100%)"></div>
+    <div class="slide-content">
+      <div class="slide-tag">طبق جديد — NEW DISH</div>
+      <h1>شرائح <span>اللحم</span><br>البقري !</h1>
+      <p>استمتع بلذة لا تقاوم في كل مرة — توصيل أمن وسريع لباب دارك</p>
+      <div class="slide-btns">
+        <a href="https://wa.me/212633812010" target="_blank"><button class="cta-btn">اطلب الان</button></a>
+        <a href="#services"><button class="cta-ghost">Nos services</button></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 4 -->
+  <div class="slide" data-index="3">
+    <div class="slide-bg" style="background-image:url('img/slider1.jpeg')"></div>
+    <div class="slide-overlay" style="background:linear-gradient(135deg,rgba(10,10,5,0.88) 0%,rgba(80,60,5,0.35) 100%)"></div>
+    <div class="slide-content">
+      <div class="slide-tag">فواكه طازجة — FRUITS FRAIS</div>
+      <h1>فواكه <span>طازجة</span><br>لباب دارك !</h1>
+      <p>رمان، برتقال وكل الفواكه الطازجة — نجيبوها ليك في أسرع وقت</p>
+      <div class="slide-btns">
+        <a href="https://wa.me/212633812010" target="_blank"><button class="cta-btn">اطلب الان</button></a>
+        <a href="#contact"><button class="cta-ghost">Contact</button></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <div class="slider-dots">
+    <span class="dot active" onclick="goSlide(0)"></span>
+    <span class="dot" onclick="goSlide(1)"></span>
+    <span class="dot" onclick="goSlide(2)"></span>
+    <span class="dot" onclick="goSlide(3)"></span>
+  </div>
+  <button class="slider-arrow left" onclick="prevSlide()">&#8249;</button>
+  <button class="slider-arrow right" onclick="nextSlide()">&#8250;</button>
+
+  <!-- Stats bar -->
+  <div class="hero-stats-bar">
     <div class="stat"><div class="stat-num">24/7</div><div class="stat-label">Disponible</div></div>
-    <div class="stat"><div class="stat-num">< 1h</div><div class="stat-label">Délai de livraison</div></div>
+    <div class="stat-sep"></div>
+    <div class="stat"><div class="stat-num">&lt; 1h</div><div class="stat-label">Délai livraison</div></div>
+    <div class="stat-sep"></div>
     <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Ben Slimane</div></div>
+    <div class="stat-sep"></div>
+    <div class="stat"><div class="stat-num">2</div><div class="stat-label">Numéros dispo</div></div>
   </div>
 </section>
 
@@ -41,30 +111,13 @@
 <section id="about">
   <div class="about-text">
     <h2>Qui sommes-<span>nous</span> ?</h2>
-    <p>Anwer Delivery est votre partenaire de livraison de confiance à Ben Slimane. Nous livrons vos colis, repas, courses et documents rapidement et en toute sécurité.</p>
+    <p>Anouar Delivery est votre partenaire de livraison de confiance à Ben Slimane. Nous livrons vos colis, repas, courses et documents rapidement et en toute sécurité.</p>
     <p>Notre mission est simple : vous faire gagner du temps avec un service local, humain et réactif. Disponible tous les jours, on est là quand vous avez besoin.</p>
-    <a href="https://wa.me/212633812010" target="_blank"><button class="cta-btn" style="margin-top:0.5rem;">Nous contacter</button></a>
   </div>
-
-  <!-- ============================================ -->
-  <!-- ZIDI IMAGE 1 (thank you) HENA               -->
-  <div class="about-img">
-    <div class="about-img" style="padding:0;overflow:hidden;">
-      <img src="img/about.jpeg" style="width:100%;height:100%;object-fit:cover;border-radius:16px;"/>
-    </div>
-    <svg width="140" viewBox="0 0 120 70" fill="none" opacity="0.6">
-      <rect x="2" y="20" width="70" height="38" rx="4" fill="#f97316" opacity="0.8"/>
-      <rect x="72" y="32" width="36" height="26" rx="3" fill="#f97316" opacity="0.6"/>
-      <rect x="74" y="34" width="14" height="14" rx="2" fill="#0d0d0d" opacity="0.5"/>
-      <circle cx="22" cy="60" r="8" fill="#1a1a1a" stroke="#f97316" stroke-width="2.5"/>
-      <circle cx="22" cy="60" r="3" fill="#f97316"/>
-      <circle cx="88" cy="60" r="8" fill="#1a1a1a" stroke="#f97316" stroke-width="2.5"/>
-      <circle cx="88" cy="60" r="3" fill="#f97316"/>
-      <rect x="108" y="48" width="8" height="4" rx="1" fill="#f97316" opacity="0.7"/>
-    </svg>
+  <div class="about-img" style="padding:0;overflow:hidden;">
+    <img src="img/about.jpeg" style="width:100%;height:100%;border-radius:16px;object-fit:cover;"/>
   </div>
-  <!-- ============================================ -->
-
+  <a href="https://wa.me/212633812010" target="_blank"><button class="cta-btn" style="margin-top:0.5rem;">Nous contacter</button></a>
 </section>
 
 <!-- SERVICES -->
@@ -95,6 +148,50 @@
   </div>
 </section>
 
+<!-- =============================== -->
+<!--        GALLERY SECTION          -->
+<!-- =============================== -->
+<section id="gallery">
+  <p class="gallery-label">معرض الصور</p>
+  <h2>أنوار على <span>أرض الواقع</span></h2>
+  <p class="section-sub">شوف خدمتنا بعينيك — لصور حقيقية من الميدان</p>
+
+  <div class="gallery-grid">
+    <div class="gallery-item gi-large" data-title="نوصل وين ماكنت" data-sub="توصيل موثوق في بن سليمان">
+      <img src="img/g4.jpeg" alt="Anouar Delivery"/>
+      <div class="gi-overlay"><div class="gi-info"><h4>نوصل وين ماكنت</h4><p>توصيل موثوق في بن سليمان</p></div></div>
+    </div>
+    <div class="gallery-item" data-title="توصيل سريع" data-sub="خلال 20 دقيقة">
+      <img src="img/g2.jpeg" alt="Livraison rapide"/>
+      <div class="gi-overlay"><div class="gi-info"><h4>توصيل سريع</h4><p>خلال 20 دقيقة</p></div></div>
+    </div>
+    <div class="gallery-item" data-title="Delivery Service" data-sub="100% Safe — Ben Slimane">
+      <img src="img/g3.jpeg" alt="Delivery Service"/>
+      <div class="gi-overlay"><div class="gi-info"><h4>Delivery Service</h4><p>100% Safe — Ben Slimane</p></div></div>
+    </div>
+    <div class="gallery-item gi-wide" data-title="فواكه طازجة" data-sub="مباشرة لباب دارك">
+      <img src="img/slider1.jpeg" alt="Fruits frais"/>
+      <div class="gi-overlay"><div class="gi-info"><h4>فواكه طازجة</h4><p>مباشرة لباب دارك</p></div></div>
+    </div>
+    <div class="gallery-item" data-title="شرائح اللحم البقري" data-sub="لذة لا تقاوم — نجيبها ليك">
+      <img src="img/slider3.jpeg" alt="Viande"/>
+      <div class="gi-overlay"><div class="gi-info"><h4>شرائح اللحم البقري</h4><p>لذة لا تقاوم</p></div></div>
+    </div>
+    <div class="gallery-item" data-title="خضار طازجة" data-sub="من السوق لدارك">
+      <img src="img/slider4.jpeg" alt="Légumes"/>
+      <div class="gi-overlay"><div class="gi-info"><h4>خضار طازجة</h4><p>من السوق لدارك</p></div></div>
+    </div>
+    <div class="gallery-item" data-title="ANOUAR DELIVERY" data-sub="Confiance et Rapide">
+      <img src="img/g1.jpeg" alt="Logo"/>
+      <div class="gi-overlay"><div class="gi-info"><h4>ANOUAR DELIVERY</h4><p>Confiance et Rapide</p></div></div>
+    </div>
+    <div class="gallery-item" data-title="دراجتنا في الشارع" data-sub="دائما جاهز للتوصيل">
+      <img src="img/slider2.jpeg" alt="Moto"/>
+      <div class="gi-overlay"><div class="gi-info"><h4>دراجتنا في الشارع</h4><p>دائما جاهز للتوصيل</p></div></div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <h2>Nous <span>contacter</span></h2>
@@ -119,7 +216,7 @@
   <div class="form-group"><label>Votre nom</label><input id="f-nom" type="text" placeholder="Ex: Ahmed Benali"/></div>
   <div class="form-group"><label>Téléphone</label><input id="f-tel" type="tel" placeholder="06 XX XX XX XX"/></div>
   <div class="form-group"><label>Votre message / commande</label><textarea id="f-msg" placeholder="Décrivez votre livraison..."></textarea></div>
-   <div class="form-group">
+  <div class="form-group">
     <label>📍 Votre localisation (lien Google Maps)</label>
     <input id="f-loc" type="text" placeholder="Collez votre lien Google Maps ici..."/>
     <small style="color:#888;font-size:0.75rem;margin-top:0.3rem;display:block;">Ouvrez Google Maps → Appuyez sur votre position → Partagez le lien</small>
@@ -128,7 +225,7 @@
 </section>
 
 <footer>
-  &copy; 2026 <span>Anwer Delivery</span> — Ben Slimane, Maroc. Tous droits réservés.
+  &copy; 2026 <span>Anouar Delivery</span> — Ben Slimane, Maroc. Tous droits réservés.
 </footer>
 
 <!-- WhatsApp floating button -->
@@ -137,6 +234,7 @@
     <path d="M16 2C8.268 2 2 8.268 2 16c0 2.49.648 4.83 1.78 6.86L2 30l7.34-1.74A13.94 13.94 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.5a11.44 11.44 0 0 1-5.83-1.59l-.42-.25-4.35 1.03 1.06-4.24-.27-.44A11.5 11.5 0 1 1 16 27.5zm6.3-8.6c-.34-.17-2.02-.99-2.33-1.1-.31-.12-.54-.17-.77.17-.23.34-.88 1.1-1.08 1.33-.2.22-.39.25-.73.08-.34-.17-1.43-.53-2.73-1.68-1.01-.9-1.69-2.01-1.89-2.35-.2-.34-.02-.52.15-.69.15-.15.34-.39.51-.59.17-.2.22-.34.34-.57.11-.22.06-.42-.03-.59-.08-.17-.77-1.85-1.05-2.54-.28-.67-.56-.58-.77-.59-.2-.01-.42-.01-.65-.01s-.59.08-.9.42c-.31.34-1.18 1.15-1.18 2.81s1.21 3.26 1.38 3.49c.17.22 2.38 3.63 5.77 5.09.81.35 1.44.56 1.93.71.81.26 1.55.22 2.13.13.65-.1 2.02-.83 2.3-1.62.28-.8.28-1.48.2-1.62-.08-.14-.31-.22-.65-.39z"/>
   </svg>
 </a>
+
 <script src="js/script.js"></script>
 </body>
 </html>
