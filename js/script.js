@@ -42,7 +42,7 @@ function startAuto() {
 
 startAuto();
 
-/* ===== GALLERY SCROLL ANIMATION ===== */
+
 var galleryObserver = new IntersectionObserver(function(entries) {
   entries.forEach(function(e) {
     if (e.isIntersecting) {
@@ -55,3 +55,6 @@ document.querySelectorAll('.gallery-item').forEach(function(el) {
   galleryObserver.observe(el);
 });
 
+/* ===== year footr ===== */
+
+ document.getElementById("year").textContent = new Date().getFullYear();
